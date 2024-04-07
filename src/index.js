@@ -1,18 +1,21 @@
-require("dotenv").config();
+const { promptGeminiPro, promptGeminiProVision } = require("./api/helper.js");
 
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+/*
 
-const googleGenerativeAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
+  // example for prompting the Gemini Pro Vision model
 
-async function run() {
-  const model = googleGenerativeAI.getGenerativeModel({
-    model: process.env.MODEL_NAME || "gemini-pro",
-  });
-  const prompt = "A beautiful sunset over the city";
-  const result = await model.generateContent(prompt);
-  const response = await result.response;
-  const text = response.text();
-  console.log(text);
-}
+  const images = [
+  { name: "goku.jpg", mimeType: "image/jpeg" },
+  { name: "eliot.jpg", mimeType: "image/jpeg" },
+];
+  //calling the mehhod
 
-run();
+promptGeminiProVision("What is goku doing? and wb eliot ?", images);
+*/
+
+/*
+// example for prompting the Gemini Pro model
+
+
+promptGeminiPro("how are you?");
+*/
